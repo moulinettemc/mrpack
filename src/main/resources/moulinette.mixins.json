@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.github.moulinettemc.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "moulinette.refmap.json",
+  "mixins": [
+    "common.LoginMuwuxin",
+    "common.ServerLoginMixinUWU",
+    "common.ServerMixin"
+  ],
+  "client": [
+    "client.ClientHandshakePirateMixin",
+    "client.ClientPacketListenerMixin",
+    "client.MinecraftMixin",
+    "client.TitleScreenMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
