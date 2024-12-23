@@ -44,7 +44,7 @@ public class LoginScreen extends Screen {
             try {
                 ClientSessions.sessions.getSessionInfo(LoginManager.token)
                         .thenAccept(info->{
-                            if(info.auth == -1) throw new RuntimeException("Connexion refusée");
+                            if(info.auth == -1) throw new RuntimeException("Connection denied");
                             if(info.auth == 1) minecraft.execute(()->{
                                 LoginManager.connect();
                             });
@@ -74,6 +74,6 @@ public class LoginScreen extends Screen {
         renderBackground(g);
         super.render(g, x, y, deltaTime);
 
-        g.drawCenteredString(Minecraft.getInstance().font, "Demande de connexion envoyé par Discord", width / 2, height / 2, 0xffffff);
+        g.drawCenteredString(Minecraft.getInstance().font, "Intent sent by Discord", width / 2, height / 2, 0xffffff);
     }
 }

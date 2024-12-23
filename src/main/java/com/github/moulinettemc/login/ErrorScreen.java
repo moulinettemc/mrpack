@@ -11,7 +11,7 @@ public class ErrorScreen extends Screen {
     private final String erreur;
 
     public ErrorScreen(String erreur) {
-        super(Component.literal("Erreur de connexion"));
+        super(Component.literal("Connection error"));
         this.erreur = erreur;
     }
 
@@ -32,7 +32,7 @@ public class ErrorScreen extends Screen {
 
         int cx = width / 2, cy = height / 2;
 
-        g.drawCenteredString(font, "Erreur de connexion", cx, cy - 50, 0xffffff);
+        g.drawCenteredString(font, "Connection error", cx, cy - 50, 0xffffff);
         g.drawCenteredString(font, erreur, cx, cy - 30, 0xffffff);
     }
 }

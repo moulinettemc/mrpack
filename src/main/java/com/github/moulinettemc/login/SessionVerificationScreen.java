@@ -14,6 +14,6 @@ public class SessionVerificationScreen extends Screen {
         renderBackground(g);
         super.render(g, p_281550_, p_282878_, p_282465_);
 
-        g.drawCenteredString(font, "Verification de la session", width / 2, height / 2, 0xffffff);
+        g.drawCenteredString(font, "Session verification", width / 2, height / 2, 0xffffff);
     }
 }

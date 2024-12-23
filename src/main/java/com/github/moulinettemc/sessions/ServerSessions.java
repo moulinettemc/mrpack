@@ -42,9 +42,9 @@ public class ServerSessions implements MinecraftSessionService {
 
     public CompletableFuture<Boolean> verifySession(String token, String username) throws URISyntaxException {
         return getSessionInfo(token).thenApply(info->{
-            LOG.info("Authentication de {}", username);
+            LOG.info("Authentication of {}", username);
             LOG.info("Token: {}", token);
-            LOG.info("username obtenu: {}", info.playername);
+            LOG.info("username obtained: {}", info.playername);
             return info.playername.equals(username);
         });
     }
